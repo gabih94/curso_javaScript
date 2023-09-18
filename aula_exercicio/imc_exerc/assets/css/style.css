@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+:root {
+  --primary-color: rgb(17, 86, 102);
+  --primary-color-darker: rgb(9, 48, 56);
+  --color-cond1: rgb(240, 218, 20);
+  --color-cond2: rgb(30, 201, 7);
+  --color-cond3: rgb(231, 76, 76);
+  --color-cond4: rgb(151, 0, 0);
+  --text-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color);
+  font-family: 'Open sans', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+.container {
+  max-width: 640px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.table{
+  width: 100%;
+  text-align: justify;
+}
+
+form input, form label, form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+form input {
+  font-size: 24px;
+  height: 50px;
+  padding: 0 20px;
+}
+
+form input:focus {
+  outline: 1px solid var(--primary-color);
+}
+
+form button {
+  border: none;
+  background: var(--primary-color);
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 700;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+form button:hover {
+  background: var(--primary-color-darker);
+}
+
+.resultado{
+  text-align: center;
+  align-items: flex-start;
+}
+
+.cond1{
+  background-color: var(--color-cond1);
+  height: 50px;
+}
+
+.cond2{
+  background-color: var(--color-cond2);
+  color: var(--text-color);
+  height: 50px;
+}
+
+.cond3{
+  background-color: var(--color-cond3);
+  color: var(--text-color);
+  height: 50px;
+}
+
+.cond4{
+  background-color: var(--color-cond4);
+  color: var(--text-color);
+  height: 50px;
+}
