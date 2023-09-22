@@ -1,3 +1,70 @@
+const form = document.querySelector('.form');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const inptPeso = e.target.querySelector('.peso');
+    const inputAltura = e.target.querySelector('.altura');
+
+    const peso = Number(inptPeso.value);
+    const altura = Number(inputAltura.value);
+
+    if(!peso){
+        setResultado('Peso inválido!', false);
+        return;
+    }
+
+    if(!altura) {
+        setResultado('Altura inválida!', false);
+        return;
+    }
+
+    const imc = getImc(peso, altura);
+    const valueImc = getValueImc(imc);
+    console.log(imc);
+    const msg = `Seu IMC é ${imc} (${valueImc})`
+
+    setResultado(msg, true);
+});
+
+function getValueImc(imc) {
+    const value = ['Abaixo do peso', 'Peso Normal', 'Sobrepeso', 'Obesidade Grau 1', 'Obesidade Grau 2', 'Obesidade Grau 3'];
+    console.log(value[3])
+    if (imc >= 39.9) return value[5];
+    if (imc >= 34.9) return value[4];
+    if (imc >= 29.9) return value[3];
+    if (imc >= 24.9) return value[2];
+    if (imc >= 18.5) return value[1];
+    if (imc < 18.5) return value[0];
+}
+
+function getImc(peso, altura) {
+    const imc = peso / altura ** 2;
+    return imc.toFixed(2);
+};
+
+function criarP() {
+    const p = document.createElement('p');
+    return p;
+};
+
+function setResultado (msg, isValid) {
+    const resultado = document.querySelector('.resultado');
+    resultado.innerHTML = '';
+
+    const p = criarP();
+
+    if(isValid){
+        p.classList.add('paragrafo_valid');
+    }else{
+        p.classList.add('paragrafo_invalid');
+    }
+
+    p.innerHTML = msg;
+    resultado.appendChild(p);
+};
+
+/*
+codigo aluno
 function meuEscopo() {
     const form = document.querySelector('.form');
     const resultado = document.querySelector('.resultado');
@@ -7,8 +74,6 @@ function meuEscopo() {
 
         const peso = form.querySelector('.peso');
         const altura = form.querySelector('.altura');
-        console.log(peso)
-        console.log(altura)
 
         imc = peso.value / (altura.value * altura.value);
         console.log(imc);
@@ -32,3 +97,4 @@ function meuEscopo() {
 }
 
 meuEscopo();
+*/

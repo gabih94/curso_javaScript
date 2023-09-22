@@ -2,10 +2,8 @@
 :root {
   --primary-color: rgb(17, 86, 102);
   --primary-color-darker: rgb(9, 48, 56);
-  --color-cond1: rgb(240, 218, 20);
-  --color-cond2: rgb(30, 201, 7);
-  --color-cond3: rgb(231, 76, 76);
-  --color-cond4: rgb(151, 0, 0);
+  --color-cond1: rgb(30, 201, 7);
+  --color-cond2: rgb(187, 39, 39);
   --text-color: #fff;
 }
 
@@ -72,25 +70,12 @@ form button:hover {
   align-items: flex-start;
 }
 
-.cond1{
+.paragrafo_valid, .paragrafo_invalid{
   background-color: var(--color-cond1);
+  color: var(--text-color);
   height: 50px;
 }
 
-.cond2{
+.paragrafo_invalid{
   background-color: var(--color-cond2);
-  color: var(--text-color);
-  height: 50px;
-}
-
-.cond3{
-  background-color: var(--color-cond3);
-  color: var(--text-color);
-  height: 50px;
-}
-
-.cond4{
-  background-color: var(--color-cond4);
-  color: var(--text-color);
-  height: 50px;
 }
