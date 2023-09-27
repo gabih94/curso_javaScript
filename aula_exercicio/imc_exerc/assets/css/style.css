@@ -79,3 +79,23 @@ form button:hover {
 .paragrafo_invalid{
   background-color: var(--color-cond2);
 }
+
+/* .date div{
+  margin: 0 0 10px 0;
+  display: flex;
+  text-align: justify;
+  justify-content: space-between;
+}
+
+.date p{
+  margin: 0;
+  font-size: 16px;
+} */
+
+.date{
+  margin: 0 0 10px 0;
+  display: flex;
+  text-align: justify;
+  justify-content: space-between;
+  font-size: 16px;
+}
